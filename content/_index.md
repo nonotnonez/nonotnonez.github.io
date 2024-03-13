@@ -5,7 +5,7 @@ weight : 1
 chapter : false
 ---
 
-# Start with Amazon VPC and AWS VPN Site-to-Site CICD
+# Start with Amazon VPC and AWS VPN Site-to-Site CICD GIT
 
 #### Overview
 
