@@ -5,7 +5,7 @@ weight : 1
 chapter : false
 ---
 
-# Bắt đầu với Amazon VPC và AWS VPN Site to Site
+# Bắt đầu với Amazon VPC và AWS VPN Site to Site CICD VN
 
 #### Tổng quan
 
