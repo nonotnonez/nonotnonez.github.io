@@ -26,9 +26,9 @@ We will proceed to delete the resources in the following order:
 
 ![Terminate EC2](../images/4/0002.png?featherlight=false&width=90pc)
 
-    Add 4/instances.png
+    Add 0003
 
-![Terminate EC2](/images/4/instances.png?featherlight=false&width=60pc)
+![Terminate EC2](/images/4/0003.png?featherlight=false&width=60pc)
 
 
 2. Confirm termination.
