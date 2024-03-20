@@ -15,6 +15,10 @@ In this workshop , we will deploy and maintain a file systems infrastructure tha
 
 ![VPC](../images/1-Introduce/efs-diagrams.png?featherlight=false&width=50pc)
 
+Test Homepage
+
+![VPC](../images/1-Introduce/0001.png?featherlight=false&width=50pc)
+
 #### Content
 
 1. [Introduction](1-introduce/)
