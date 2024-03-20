@@ -22,7 +22,9 @@ We will proceed to delete the resources in the following order:
 
    TESTING
 
-   ![Terminate EC2](/images/4-resourecleanup/efs-1.png?featherlight=false&width=90pc)
+    Add ..
+
+   ![Terminate EC2](../images/4-resourecleanup/efs-1.png?featherlight=false&width=90pc)
 
 2. Confirm termination.
 
