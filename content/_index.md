@@ -1,23 +1,23 @@
 ---
-title : "Start with Amazon VPC and AWS VPN Site-to-Site"
+title : " Amazon EFS file system "
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 ---
 
-# Start with Amazon VPC and AWS VPN Site-to-Site CICD GIT
+# File Systems in the Cloud
 
 #### Overview
 
-In this lab, you will explore the fundamentals of Amazon VPC (Virtual Private Cloud) and AWS VPN (Virtual Private Network) Site-to-Site connections. Gain an understanding of essential concepts and features within Amazon VPC, and practice creating a basic VPC. Additionally, learn how to configure a Site-to-Site VPN to establish a connection between an on-premise environment and an AWS VPC environment.
+Amazone Elastic File System (Amazon EFS) provides a serverless, set-and-forget-elastic file system that you can use to share file data without provisioning or managing storage.
 
-![VPC](../images/1-Introduce/serviceicon.png?featherlight=false&width=10pc)
+In this workshop , we will deploy and maintain a file systems infrastructure that is asscessible from two different server
+
+![VPC](../images/1-Introduce/efs-diagrams.png?featherlight=false&width=50pc)
 
 #### Content
 
-1. [Introduction to VPC](1-introduce/)
-2. [Firewall within VPC](2-firewallinvpc/)
-3. [Preparation Steps](3-prerequiste/)
-4. [Creating an EC2 Server](4-createec2server/)
-5. [Configuration of Site-to-Site VPN](5-vpnsitetosite/)
-6. [Resource Cleanup](6-cleanup/)
+1. [Introduction](1-introduce/)
+2. [Prepairation](2-prepairation/)
+3. [Configure EFS](3-configureefs/)
+4. [Resource Cleanup](4-resourcecleanup/)

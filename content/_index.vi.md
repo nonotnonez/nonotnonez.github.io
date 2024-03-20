@@ -5,7 +5,7 @@ weight : 1
 chapter : false
 ---
 
-# Hướng Dẫn Bắt đầu với Amazon VPC và AWS VPN Site to Site CICD VN 239 346
+# Bắt đầu với Amazon VPC và AWS VPN Site to Site
 
 #### Tổng quan
 
@@ -16,10 +16,10 @@ Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và th�
 
 #### Nội dung
 
-1. [Giới thiệu](1-introduce/)
-2. [Quản lý tài khoản](2-firewallinvpc/)
-3. [Quản lý chi phí](3-prerequiste/) 
-4. [Cấu hình Ứng Dungj](4-createec2server/)
-5. [Các tính năng nâng cao](5-vpnsitetosite/)
+1. [Giới thiệu VPC](1-introduce/)
+2. [Tường lửa trong VPC](2-firewallinvpc/)
+3. [Các bước chuẩn bị](3-prerequiste/) 
+4. [Tạo EC2 Server](4-createec2server/)
+5. [Cấu hình Site-to-Site VPN](5-vpnsitetosite/)
 6. [Dọn dẹp tài nguyên](6-cleanup/)
 
