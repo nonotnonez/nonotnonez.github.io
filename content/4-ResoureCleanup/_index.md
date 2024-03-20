@@ -17,10 +17,10 @@ We will proceed to delete the resources in the following order:
     - Select all EC2 instances related to the lab.
     - Select **Instance state**.
     - Select **Terminate instance**.
-    - 
-![Terminate EC2](/images/4-resourecleanup/efs.png?featherlight=false&width=90pc)
+   
+   ![Terminate EC2](/images/4-resourecleanup/efs.png?featherlight=false&width=90pc)
 
-![Terminate EC2](/images/4-resourecleanup/efs-1.png?featherlight=false&width=90pc)
+   ![Terminate EC2](/images/4-resourecleanup/efs-1.png?featherlight=false&width=90pc)
 
 2. Confirm termination.
 
