@@ -18,14 +18,17 @@ We will proceed to delete the resources in the following order:
     - Select **Instance state**.
     - Select **Terminate instance**.
    
-   ![Terminate EC2](../images/4/0001.png?featherlight=false&width=90pc)
+![Terminate EC2](../images/4/0001.png?featherlight=false&width=90pc)
 
    TESTING
 
     Add ..
 
-    ![Terminate EC2](../images/4/0002.png?featherlight=false&width=90pc)
+![Terminate EC2](../images/4/0002.png?featherlight=false&width=90pc)
 
+    Add 4/instances.png
+
+![Terminate EC2](/images/4/instances.png?featherlight=false&width=60pc)
 
 
 2. Confirm termination.
