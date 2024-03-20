@@ -18,7 +18,7 @@ We will proceed to delete the resources in the following order:
     - Select **Instance state**.
     - Select **Terminate instance**.
    
-   ![Terminate EC2](/images/4-resourecleanup/efs.png?featherlight=false&width=90pc)
+   ![Terminate EC2](/images/4/0001.png?featherlight=false&width=90pc)
 
    ![Terminate EC2](/images/4-resourecleanup/efs-1.png?featherlight=false&width=90pc)
 
