@@ -24,7 +24,9 @@ We will proceed to delete the resources in the following order:
 
     Add ..
 
-   ![Terminate EC2](../images/4-resourecleanup/efs-1.png?featherlight=false&width=90pc)
+    ![Terminate EC2](../images/4/0002.png?featherlight=false&width=90pc)
+
+
 
 2. Confirm termination.
 
