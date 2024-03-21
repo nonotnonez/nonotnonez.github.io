@@ -4,7 +4,7 @@
 	"title": " Amazon EFS file system ",
 	"tags": [],
 	"description": "",
-	"content": "File Systems in the Cloud Overview Amazone Elastic File System (Amazon EFS) provides a serverless, set-and-forget-elastic file system that you can use to share file data without provisioning or managing storage.\nIn this workshop , we will deploy and maintain a file systems infrastructure that is asscessible from two different server\nTest Homepage\nContent Introduction Prepairation Configure EFS Resource Cleanup "
+	"content": "File Systems in the Cloud Overview Amazone Elastic File System (Amazon EFS) provides a serverless, set-and-forget-elastic file system that you can use to share file data without provisioning or managing storage.\nIn this workshop , we will deploy and maintain a file systems infrastructure that is asscessible from two different server\nContent Introduction Prepairation Configure EFS Resource Cleanup "
 },
 {
 	"uri": "//localhost:1313/3-configureefs/3.1-createsecuritygroupsforefs/",
