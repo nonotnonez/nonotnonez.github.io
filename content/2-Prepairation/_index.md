@@ -14,7 +14,7 @@ In this lab, we will be constructing a model based on the following diagram:
 
 ### Contents
 
-1. [VPC & Subnets](2.1-vpc&subnets/)
+1. [VPC & Subnets](2.1-vpcsubnets/)
 2. [Internet gateway](2.2-internetgateway/)
 3. [Route table](2.3-routetable/)
 4. [Security groups](2.4-securitygroups/)
