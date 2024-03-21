@@ -91,7 +91,7 @@
 	"content": "Tạo Route Table định tuyến đi ra ngoài internet thông qua Internet Gateway. Trong giao diện VPC\nChọn Route Tables Chọn Create route table Tiến hành cấu hình Route table\nName, nhập Route table-Public VPC, chọn ASG VPC. VPC id sẽ được tự động điền vào. Chọn Cretae route table Hoàn thành tạo Route table Thực hiện Edit route\nChọn Actions Chọn Edit routes Trong giao diện Edit routes\nChọn Add route Điền phần Destination CIDR : 0.0.0.0/0 đại diện cho Internet. Trong phần Target chọn Internet Gateway, sau đó chọn Internet Gateway chúng ta đã tạo. Internet Gateway ID sẽ được tự động điền. Chọn Save changes Hoàn thành và kiểm tra lại Routes Đảm bảo Route table - Public đang được chọn.\nChọn subnet associations Chọn Edit subnet associations Trong bước Edit subnet associations\nMở rộng cột Subnet ID bằng cách kéo thanh ngăn sang phải. Chọn đúng 2 subnet public chúng ta đã tạo. Chọn Save associations Hoàn thành và kiểm tra lại Subnet associations "
 },
 {
-	"uri": "//localhost:1313/vi/4-resourecleanup/",
+	"uri": "//localhost:1313/vi/4-resourcecleanup/",
 	"title": "Dọn dẹp tài nguyên",
 	"tags": [],
 	"description": "",

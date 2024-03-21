@@ -158,16 +158,16 @@
                 href="//localhost:1313/vi/3-configureefs/3.4-sharefilesbetweentwoec2instances/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-resourecleanup/</loc>
+    <loc>//localhost:1313/vi/4-resourcecleanup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-resourecleanup/"
+                href="//localhost:1313/4-resourcecleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-resourecleanup/"
+                href="//localhost:1313/vi/4-resourcecleanup/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>

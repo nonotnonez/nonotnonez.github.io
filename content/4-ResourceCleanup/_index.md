@@ -1,5 +1,5 @@
 ---
-title : "Resource Clean up"
+title : "Resource Cleanup"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
