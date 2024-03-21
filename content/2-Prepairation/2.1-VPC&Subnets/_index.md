@@ -23,4 +23,4 @@ A Security group rule is created to grant access to traffic entering or leaving 
 
 - **Inbound Rules:** These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address.
 
-![VPC](/images/2-Prepairation/2.1-vpcsubnets/subnets.png?featherlight=false&width=90pc)
+![VPC](/images/2-Prepairation/212.png?featherlight=false&width=90pc)
