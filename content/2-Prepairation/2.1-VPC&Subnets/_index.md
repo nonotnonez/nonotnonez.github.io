@@ -12,7 +12,7 @@ pre : " <b> 2.1 </b> "
 
 - **Allow Rules Only:** Only Allow rules can be added; Deny rules cannot be added.
 
-![VPC](/images/2-Prepairation/2.1-vpcsubnets/vpcs.png?featherlight=false&width=90pc)
+![VPC](/images/2-Prepairation/211.png?featherlight=false&width=90pc)
 
 
 ## Subnets
