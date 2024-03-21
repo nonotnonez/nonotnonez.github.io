@@ -10,7 +10,7 @@ pre : " <b> 2. </b> "
 
 In this lab, we will be constructing a model based on the following diagram:
 
-![VPC](/images/2-Prepairation/2.4-securitygroups/sg1.png?featherlight=false&width=90pc)
+![VPC](/images/2/efs-diagram.png?featherlight=false&width=90pc)
 
 ### Contents
 
