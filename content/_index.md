@@ -17,7 +17,7 @@ In this workshop , we will deploy and maintain a file systems infrastructure tha
 
 Test Homepage
 
-![VPC](../images/1-Introduce/0001.png?featherlight=false&width=50pc)
+![VPC](../images/1/0001.png?featherlight=false&width=50pc)
 
 #### Content
 
