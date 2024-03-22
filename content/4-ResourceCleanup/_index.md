@@ -22,7 +22,7 @@ We will proceed to delete the resources in the following order:
     - Select **WebServers-EFS-1-SG**
     - Select **delete**
       
-![Terminate EC2](/images/4/sg1.png?featherlight=false&width=90pc)
+![Terminate EC2](/FCJ2024/images/4/sg1.png?featherlight=false&width=90pc)
 ![Terminate EC2](/images/4/sg2.png?featherlight=false&width=90pc)
 
 3. Delete file system
