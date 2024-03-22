@@ -25,8 +25,11 @@ pre : " <b> 3.3 </b> "
      - cat efs-1-setup.log	
 
  ![VPC](/images/3-configureefs/331.png?featherlight=false&width=90pc) 
+
  ![VPC](/images/3-configureefs/332.png?featherlight=false&width=90pc) 
+
  ![VPC](/images/3-configureefs/333.png?featherlight=false&width=90pc) 
+ 
  ![VPC](/images/3-configureefs/334.png?featherlight=false&width=90pc) 
 
 

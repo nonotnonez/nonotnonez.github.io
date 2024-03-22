@@ -18,9 +18,13 @@ pre : " <b> 3.2 </b> "
    - Throught mode: **Bursting**
       
  ![VPC](/images/3-configureefs/321.png?featherlight=false&width=90pc)
+
  ![VPC](/images/3-configureefs/322.png?featherlight=false&width=90pc)  
+
  ![VPC](/images/3-configureefs/323.png?featherlight=false&width=90pc)  
+
  ![VPC](/images/3-configureefs/324.png?featherlight=false&width=90pc)  
+ 
  ![VPC](/images/3-configureefs/325.png?featherlight=false&width=90pc)  
 
 2. Network access
