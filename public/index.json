@@ -11,7 +11,7 @@
 	"title": "Create Security groups",
 	"tags": [],
 	"description": "",
-	"content": "Create Security group for EFS Access the AWS Management Console interface: Locate and click on VPC Within the VPC interface: Select Your VPC "
+	"content": "Security group settings Create Create Security group for EFS interface: Name:\tWebServers-EFS-1-SG VPC:\tWeb_Servers_SG Configure Inbound: Allow NFS Checking Security Groups interface: Select WebServers-EFS-1-SG "
 },
 {
 	"uri": "//localhost:1313/1-introduce/",
@@ -32,7 +32,7 @@
 	"title": "Create EFS for file systems",
 	"tags": [],
 	"description": "",
-	"content": "Create Subnet In the VPC Interface: Select Subnets Select Create subnet In the Create subnet Interface: Select ASG VPC "
+	"content": "Create EFS for file systems File systems settings: Services: EFS Choose Create file systems Name: WebServers-EFS-1 Uncheck Enable automatic backups (for reduce cost) Transition into infrequent Access (IA): choose None Transition into Archive: choose None Throught mode: Bursting Network access VPC: WebServers Mount targets: Remove all default Security groups Configure for Availability zone: ap-southeast-1a access to Security group: WebServers-EFS-1-SG Click Create Checking and copy config EFS via DNS Select WebServers-EFS-1 VPC Choose Attach Choose COPY Using the EFS mount helper: sudo mount -t efs -o tls fs-0469e4e20cb346954:/ efs "
 },
 {
 	"uri": "//localhost:1313/2-prepairation/2.2-internetgateway/",
@@ -60,7 +60,7 @@
 	"title": "Launch Instances and Configure EFS",
 	"tags": [],
 	"description": "",
-	"content": "Create an Internet Gateway In the VPC interface: Select Internet Gateways Configure the internet gateway: Enter Internet Gateway for the Name tag Click on Create internet gateway "
+	"content": "Configuration Instances configure and Mount EFS file systems:\nSelect WebServer1\nConnect to Instances\nIn CMD interface run command:\nsudo -i sudo yum install -y amazon-efs-utils mkdir data ls sudo mount -t efs -o tls fs-0469e4e20cb346954:/ data cd data sudo bash -c \u0026ldquo;cat \u0026raquo; efs-1-setup.log\u0026rdquo; efs-1 mounted in site A cat efs-1-setup.log "
 },
 {
 	"uri": "//localhost:1313/2-prepairation/2.3-routetable/",
@@ -74,7 +74,7 @@
 	"title": "Resource Cleanup",
 	"tags": [],
 	"description": "",
-	"content": "Clean up resources We will proceed to delete the resources in the following order:\nTerminate EC2 Instances Terminate EC2 instance: Access the Amazon EC2 console at EC2. On the left navigation bar, select \u0026ldquo;Instances.\u0026rdquo; Select all EC2 instances related to the lab. Select Instance state. Select Terminate instance. TESTING\nAdd ..\rAdd 0003\rConfirm termination.\nRemove NAT Gateway and Elastic IP Address Remove NAT Gateway and Elastic IP Address. AWS charges for wasted EIPs, so you need to double-check to avoid unintended charges.\nVisit the Amazon VPC console page at VPC.\nOn the left navigation bar, click \u0026ldquo;NAT Gateway.\u0026rdquo;\nSelect NAT Gateway.\nClick Action.\nClick Delete NAT Gateway.\nType \u0026ldquo;delete.\u0026rdquo;\nClick Delete to confirm the deletion of NAT Gateway.\nDelete Elastic IP Address Continue to delete Elastic IP Address.\nVisit the Amazon VPC console page at VPC.\nOn the left navigation bar, click \u0026ldquo;Elastic IP.\u0026rdquo;\nSelect the Elastic IP Address we created.\nClick Action.\nClick Release Elastic IP Address.\nClick Release.\nDelete the EC2 Instance connection endpoint Access to Endpoint transactions Select Action, select Delete VPC endpoints Enter delete Delete in the following order: VPN Site to Site connection.\nVirtual Private Gateway.\nCustomer Gateway.\nVPC ASG VPN.\nVPC ASG.\n"
+	"content": "Clean up resources We will proceed to delete the resources in the following order:\nDelete Instances Access the Amazon EC2 Select WebServers1 and WebServers2 Select Terminate Delete Security Groups Access to Security Groups Select WebServers-EFS-1-SG Select delete Delete file system Access the Amazon EFS Select WebServers-EFS-1-SG. Select Delete Confirm. "
 },
 {
 	"uri": "//localhost:1313/2-prepairation/2.4-securitygroups/",
@@ -88,7 +88,7 @@
 	"title": "Share files between two EC2 Instance",
 	"tags": [],
 	"description": "",
-	"content": "Create Route Table for Outbound Internet Routing via Internet Gateway In the VPC interface:\nSelect Route Tables. Click on Create route table. Configure the Route table:\nEnter a Name: Route table-Public Complete creating the Route table.\nTo make route edits:\nSelect Actions. Choose Edit routes. In the Edit routes interface:\nClick on Add route. Fill in the Destination CIDR: 0.0.0.0/0 representing the Internet. In the Target section, select Internet Gateway, then choose the created Internet Gateway (Gateway ID auto-fills). Click Save changes. Review and confirm the updated Routes.\nEnsure that Route table - Public is selected.\nSelect Subnet Associations. Click on Edit subnet associations. In the Edit subnet associations step:\nAdjust the width of the Subnet ID column by dragging the pane to the right. Select the appropriate 2 public subnets that were created. Click on Save associations.\nReview and confirm the updated Subnet associations.\n"
+	"content": "Setting EFS in diffirent Instane In the EFS interface:\nSelect WebServers-EFS-1-SG Click Network tab Click Manage Add mount target: Configure for Availability zone: ap-southeast-1b access to Security group: WebServers-EFS-1-SG Checking EFS config:\nInstances configure and Mount EFS file systems:\nSelect WebServer2 Connect to Instances\nIn CMD interface run command:\nsudo -i sudo yum install -y amazon-efs-utils mkdir data ls sudo mount -t efs -o tls fs-0469e4e20cb346954:/ data cd data sudo bash -c \u0026ldquo;cat \u0026raquo; efs-1-setup.log\u0026rdquo; efs-1 mounted in site B cat efs-1-setup.log We will see data in different Instances "
 },
 {
 	"uri": "//localhost:1313/2-prepairation/2.5-instances/",

@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.123.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Resource Cleanup :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1711099135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1711099135" rel="stylesheet">
-    <link href="/css/hybrid.css?1711099135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1711099135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1711099135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1711099135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1711099135" rel="stylesheet">
-    <link href="/css/theme.css?1711099135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1711099135" rel="stylesheet">
+    <link href="/css/nucleus.css?1711121595" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1711121595" rel="stylesheet">
+    <link href="/css/hybrid.css?1711121595" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1711121595" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1711121595" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711121595" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1711121595" rel="stylesheet">
+    <link href="/css/theme.css?1711121595" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1711121595" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1711099135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1711121595" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1711099135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1711121595"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1711099135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1711099135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1711121595"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1711121595"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1711099135"></script>
+<script type="text/javascript" src="/js/search.js?1711121595"></script>
 
     
   </div>
@@ -604,14 +604,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#clean-up-resources">Clean up resources</a>
-      <ul>
-        <li><a href="#terminate-ec2-instances">Terminate EC2 Instances</a></li>
-        <li><a href="#remove-nat-gateway-and-elastic-ip-address">Remove NAT Gateway and Elastic IP Address</a></li>
-        <li><a href="#delete-elastic-ip-address">Delete Elastic IP Address</a></li>
-        <li><a href="#delete-in-the-following-order">Delete in the following order:</a></li>
-      </ul>
-    </li>
+    <li><a href="#clean-up-resources">Clean up resources</a></li>
   </ul>
 </nav>
     </div>
@@ -639,125 +632,40 @@
 
 	<h2 id="clean-up-resources">Clean up resources</h2>
 <p>We will proceed to delete the resources in the following order:</p>
-<h3 id="terminate-ec2-instances">Terminate EC2 Instances</h3>
 <ol>
-<li>Terminate EC2 instance:
+<li>Delete Instances
 <ul>
-<li>Access the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">EC2</a>.</li>
-<li>On the left navigation bar, select &ldquo;Instances.&rdquo;</li>
-<li>Select all EC2 instances related to the lab.</li>
-<li>Select <strong>Instance state</strong>.</li>
-<li>Select <strong>Terminate instance</strong>.</li>
+<li>Access the Amazon EC2</li>
+<li>Select <strong>WebServers1</strong> and <strong>WebServers2</strong></li>
+<li>Select <strong>Terminate</strong></li>
 </ul>
 </li>
 </ol>
-<p><img alt="Terminate EC2" src="../images/4/0001.png?featherlight=false&width=90pc"></p>
-<p>TESTING</p>
-<pre><code>Add ..
-</code></pre>
-<p><img alt="Terminate EC2" src="../images/4/0002.png?featherlight=false&width=90pc"></p>
-<pre><code>Add 0003
-</code></pre>
-<p><img alt="Terminate EC2" src="/images/4/0003.png?featherlight=false&width=60pc"></p>
+<p><img alt="Terminate EC2" src="/images/4/ec21.png?featherlight=false&width=90pc">
+<img alt="Terminate EC2" src="/images/4/ec22.png?featherlight=false&width=90pc"></p>
 <ol start="2">
-<li>
-<p>Confirm termination.</p>
-<p><img alt="Confirm Termination" src="/images/16/0002.png?featherlight=false&width=90pc"></p>
+<li>Delete Security Groups
+<ul>
+<li>Access to Security Groups</li>
+<li>Select <strong>WebServers-EFS-1-SG</strong></li>
+<li>Select <strong>delete</strong></li>
+</ul>
 </li>
 </ol>
-<h3 id="remove-nat-gateway-and-elastic-ip-address">Remove NAT Gateway and Elastic IP Address</h3>
+<p><img alt="Terminate EC2" src="/images/4/sg1.png?featherlight=false&width=90pc">
+<img alt="Terminate EC2" src="/images/4/sg2.png?featherlight=false&width=90pc"></p>
+<ol start="3">
+<li>Delete file system
 <ul>
-<li>
-<p>Remove NAT Gateway and Elastic IP Address. AWS charges for wasted EIPs, so you need to double-check to avoid unintended charges.</p>
-</li>
-<li>
-<p>Visit the Amazon VPC console page at <a href="https://console.aws.amazon.com/vpc/">VPC</a>.</p>
-</li>
-<li>
-<p>On the left navigation bar, click &ldquo;NAT Gateway.&rdquo;</p>
-</li>
-<li>
-<p>Select NAT Gateway.</p>
-</li>
-<li>
-<p>Click <strong>Action</strong>.</p>
-</li>
-<li>
-<p>Click <strong>Delete NAT Gateway</strong>.</p>
-<p><img alt="Delete NAT Gateway" src="/images/16/0003.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Type &ldquo;delete.&rdquo;</p>
-</li>
-<li>
-<p>Click <strong>Delete</strong> to confirm the deletion of NAT Gateway.</p>
-<p><img alt="Confirm Deletion" src="/images/16/0004.png?featherlight=false&width=90pc">
-<img alt="Confirm Deletion" src="/images/16/0005.png?featherlight=false&width=90pc"></p>
-</li>
+<li>Access the Amazon EFS</li>
+<li>Select <strong>WebServers-EFS-1-SG</strong>.</li>
+<li>Select <strong>Delete</strong></li>
+<li>Confirm.</li>
 </ul>
-<h3 id="delete-elastic-ip-address">Delete Elastic IP Address</h3>
-<ul>
-<li>
-<p>Continue to delete Elastic IP Address.</p>
 </li>
-<li>
-<p>Visit the Amazon VPC console page at <a href="https://console.aws.amazon.com/vpc/">VPC</a>.</p>
-</li>
-<li>
-<p>On the left navigation bar, click &ldquo;Elastic IP.&rdquo;</p>
-</li>
-<li>
-<p>Select the Elastic IP Address we created.</p>
-</li>
-<li>
-<p>Click <strong>Action</strong>.</p>
-</li>
-<li>
-<p>Click <strong>Release Elastic IP Address</strong>.</p>
-</li>
-<li>
-<p>Click <strong>Release</strong>.</p>
-<p><img alt="Release Elastic IP" src="/images/16/0006.png?featherlight=false&width=90pc">
-<img alt="Release Elastic IP" src="/images/16/0007.png?featherlight=false&width=90pc"></p>
-</li>
-</ul>
-<h4 id="delete-the-ec2-instance-connection-endpoint">Delete the EC2 Instance connection endpoint</h4>
-<ul>
-<li>Access to Endpoint transactions</li>
-<li>Select Action, select Delete VPC endpoints</li>
-<li>Enter delete
-<img alt="Create VPC" src="/images/16/00020.png?featherlight=false&width=90pc"></li>
-</ul>
-<h3 id="delete-in-the-following-order">Delete in the following order:</h3>
-<ul>
-<li>
-<p>VPN Site to Site connection.</p>
-<p><img alt="VPN Site to Site" src="/images/16/0008.png?featherlight=false&width=90pc">
-<img alt="VPN Site to Site" src="/images/16/0009.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Virtual Private Gateway.</p>
-<p><img alt="Virtual Private Gateway" src="/images/16/00010.png?featherlight=false&width=90pc">
-<img alt="Virtual Private Gateway" src="/images/16/00011.png?featherlight=false&width=90pc">
-<img alt="Virtual Private Gateway" src="/images/16/00012.png?featherlight=false&width=90pc">
-<img alt="Virtual Private Gateway" src="/images/16/00013.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Customer Gateway.</p>
-<p><img alt="Customer Gateway" src="/images/16/00014.png?featherlight=false&width=90pc">
-<img alt="Customer Gateway" src="/images/16/00015.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>VPC ASG VPN.</p>
-<p><img alt="VPC ASG VPN" src="/images/16/00016.png?featherlight=false&width=90pc">
-<img alt="VPC ASG VPN" src="/images/16/00017.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>VPC ASG.</p>
-<p><img alt="VPC ASG" src="/images/16/00018.png?featherlight=false&width=90pc">
-<img alt="VPC ASG" src="/images/16/00019.png?featherlight=false&width=90pc"></p>
-</li>
-</ul>
+</ol>
+<p><img alt="Terminate EC2" src="/images/4/efs.png?featherlight=false&width=90pc">
+<img alt="Terminate EC2" src="/images/4/efs-1.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1031,19 +939,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1711099135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1711099135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1711099135"></script>
-    <script src="/js/jquery.sticky.js?1711099135"></script>
-    <script src="/js/featherlight.min.js?1711099135"></script>
-    <script src="/js/highlight.pack.js?1711099135"></script>
+    <script src="/js/clipboard.min.js?1711121595"></script>
+    <script src="/js/perfect-scrollbar.min.js?1711121595"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1711121595"></script>
+    <script src="/js/jquery.sticky.js?1711121595"></script>
+    <script src="/js/featherlight.min.js?1711121595"></script>
+    <script src="/js/highlight.pack.js?1711121595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1711099135"></script>
-    <script src="/js/learn.js?1711099135"></script>
-    <script src="/js/hugo-learn.js?1711099135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1711121595"></script>
+    <script src="/js/learn.js?1711121595"></script>
+    <script src="/js/hugo-learn.js?1711121595"></script>
 
-    <link href="/mermaid/mermaid.css?1711099135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1711099135"></script>
+    <link href="/mermaid/mermaid.css?1711121595" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1711121595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

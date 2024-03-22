@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.123.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Launch Instances and Configure EFS :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1711099135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1711099135" rel="stylesheet">
-    <link href="/css/hybrid.css?1711099135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1711099135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1711099135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1711099135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1711099135" rel="stylesheet">
-    <link href="/css/theme.css?1711099135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1711099135" rel="stylesheet">
+    <link href="/css/nucleus.css?1711121595" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1711121595" rel="stylesheet">
+    <link href="/css/hybrid.css?1711121595" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1711121595" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1711121595" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711121595" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1711121595" rel="stylesheet">
+    <link href="/css/theme.css?1711121595" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1711121595" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1711099135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1711121595" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1711099135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1711121595"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1711099135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1711099135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1711121595"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1711121595"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1711099135"></script>
+<script type="text/javascript" src="/js/search.js?1711121595"></script>
 
     
   </div>
@@ -610,7 +610,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#create-an-internet-gateway">Create an Internet Gateway</a></li>
+    <li><a href="#configuration">Configuration</a></li>
   </ul>
 </nav>
     </div>
@@ -636,25 +636,37 @@
 
 
 
-	<h2 id="create-an-internet-gateway">Create an Internet Gateway</h2>
-<ol>
-<li>In the <strong>VPC</strong> interface:
+	<h2 id="configuration">Configuration</h2>
+<p><strong>Instances</strong> configure and <strong>Mount EFS</strong> file systems:</p>
 <ul>
-<li>Select <strong>Internet Gateways</strong></li>
+<li>
+<p>Select <strong>WebServer1</strong></p>
+</li>
+<li>
+<p>Connect to Instances</p>
+</li>
+<li>
+<p>In CMD interface run command:</p>
+<ul>
+<li>sudo -i</li>
+<li>sudo yum install -y amazon-efs-utils</li>
+<li>mkdir data</li>
+<li>ls</li>
+<li><strong>sudo mount -t efs -o tls fs-0469e4e20cb346954:/ data</strong></li>
+<li>cd data</li>
+<li>sudo bash -c &ldquo;cat &raquo; efs-1-setup.log&rdquo;
+<ul>
+<li>efs-1 mounted in site A</li>
 </ul>
 </li>
-</ol>
-<p><img alt="VPC" src="/images/3-configureefs/3.3-launchinstancesandconfigureefs/1.png?featherlight=false&width=90pc"></p>
-<ol start="2">
-<li>Configure the internet gateway:
-<ul>
-<li>Enter <strong><code>Internet Gateway</code></strong> for the <strong>Name tag</strong></li>
-<li>Click on <strong>Create internet gateway</strong></li>
-<li></li>
+<li>cat efs-1-setup.log</li>
 </ul>
 </li>
-</ol>
-<p><img alt="VPC" src="/images/3-configureefs/3.3-launchinstancesandconfigureefs/2.png?featherlight=false&width=90pc"></p>
+</ul>
+<p><img alt="VPC" src="/images/3-configureefs/331.png?featherlight=false&width=90pc">
+<img alt="VPC" src="/images/3-configureefs/332.png?featherlight=false&width=90pc">
+<img alt="VPC" src="/images/3-configureefs/333.png?featherlight=false&width=90pc">
+<img alt="VPC" src="/images/3-configureefs/334.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -935,19 +947,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1711099135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1711099135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1711099135"></script>
-    <script src="/js/jquery.sticky.js?1711099135"></script>
-    <script src="/js/featherlight.min.js?1711099135"></script>
-    <script src="/js/highlight.pack.js?1711099135"></script>
+    <script src="/js/clipboard.min.js?1711121595"></script>
+    <script src="/js/perfect-scrollbar.min.js?1711121595"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1711121595"></script>
+    <script src="/js/jquery.sticky.js?1711121595"></script>
+    <script src="/js/featherlight.min.js?1711121595"></script>
+    <script src="/js/highlight.pack.js?1711121595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1711099135"></script>
-    <script src="/js/learn.js?1711099135"></script>
-    <script src="/js/hugo-learn.js?1711099135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1711121595"></script>
+    <script src="/js/learn.js?1711121595"></script>
+    <script src="/js/hugo-learn.js?1711121595"></script>
 
-    <link href="/mermaid/mermaid.css?1711099135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1711099135"></script>
+    <link href="/mermaid/mermaid.css?1711121595" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1711121595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

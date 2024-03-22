@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.123.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create EFS for file systems :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1711099135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1711099135" rel="stylesheet">
-    <link href="/css/hybrid.css?1711099135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1711099135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1711099135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1711099135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1711099135" rel="stylesheet">
-    <link href="/css/theme.css?1711099135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1711099135" rel="stylesheet">
+    <link href="/css/nucleus.css?1711121595" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1711121595" rel="stylesheet">
+    <link href="/css/hybrid.css?1711121595" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1711121595" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1711121595" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711121595" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1711121595" rel="stylesheet">
+    <link href="/css/theme.css?1711121595" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1711121595" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1711099135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1711121595" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1711099135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1711121595"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1711099135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1711099135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1711121595"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1711121595"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1711099135"></script>
+<script type="text/javascript" src="/js/search.js?1711121595"></script>
 
     
   </div>
@@ -610,7 +610,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#create-subnet">Create Subnet</a></li>
+    <li><a href="#create-efs-for-file-systems">Create EFS for file systems</a></li>
   </ul>
 </nav>
     </div>
@@ -636,24 +636,61 @@
 
 
 
-	<h2 id="create-subnet">Create Subnet</h2>
+	<h2 id="create-efs-for-file-systems">Create EFS for file systems</h2>
 <ol>
-<li>In the <strong>VPC</strong> Interface:
+<li>File systems settings:
 <ul>
-<li>Select <strong>Subnets</strong></li>
-<li>Select <strong>Create subnet</strong></li>
+<li>Services: <strong>EFS</strong></li>
+<li>Choose <strong>Create file systems</strong></li>
+<li>Name: <strong>WebServers-EFS-1</strong></li>
+<li>Uncheck <strong>Enable automatic backups</strong> (for reduce cost)</li>
+<li>Transition into infrequent Access (IA): choose <strong>None</strong></li>
+<li>Transition into Archive: choose <strong>None</strong></li>
+<li>Throught mode: <strong>Bursting</strong></li>
 </ul>
 </li>
 </ol>
-<p><img alt="VPC" src="/images/3-configureefs/3.2-createefsforfilesystems/1.png?featherlight=false&width=90pc"></p>
+<p><img alt="VPC" src="/images/3-configureefs/321.png?featherlight=false&width=90pc">
+<img alt="VPC" src="/images/3-configureefs/322.png?featherlight=false&width=90pc"><br>
+<img alt="VPC" src="/images/3-configureefs/323.png?featherlight=false&width=90pc"><br>
+<img alt="VPC" src="/images/3-configureefs/324.png?featherlight=false&width=90pc"><br>
+<img alt="VPC" src="/images/3-configureefs/325.png?featherlight=false&width=90pc"></p>
 <ol start="2">
-<li>In the <strong>Create subnet</strong> Interface:
+<li>Network access
 <ul>
-<li>Select <strong>ASG</strong> VPC</li>
+<li>VPC: <strong>WebServers</strong></li>
+<li>Mount targets:
+<ul>
+<li>Remove all default Security groups</li>
+<li>Configure for Availability zone: <strong>ap-southeast-1a</strong> access to Security group: <strong>WebServers-EFS-1-SG</strong></li>
+</ul>
+</li>
+<li>Click <strong>Create</strong></li>
 </ul>
 </li>
 </ol>
-<p><img alt="VPC" src="/images/3-configureefs/3.2-createefsforfilesystems/2.png?featherlight=false&width=90pc"></p>
+<p><img alt="VPC" src="/images/3-configureefs/326.png?featherlight=false&width=90pc"><br>
+<img alt="VPC" src="/images/3-configureefs/327.png?featherlight=false&width=90pc"><br>
+<img alt="VPC" src="/images/3-configureefs/328.png?featherlight=false&width=90pc"><br>
+<img alt="VPC" src="/images/3-configureefs/329.png?featherlight=false&width=90pc">
+<img alt="VPC" src="/images/3-configureefs/3210.png?featherlight=false&width=90pc"></p>
+<ol start="3">
+<li>Checking and copy config EFS via DNS
+<ul>
+<li>Select <strong>WebServers-EFS-1</strong> VPC</li>
+<li>Choose <strong>Attach</strong></li>
+<li>Choose <strong>COPY</strong> Using the EFS mount helper:
+<ul>
+<li><strong>sudo mount -t efs -o tls fs-0469e4e20cb346954:/ efs</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img alt="VPC" src="/images/3-configureefs/3211.png?featherlight=false&width=90pc">
+<img alt="VPC" src="/images/3-configureefs/3212.png?featherlight=false&width=90pc">
+<img alt="VPC" src="/images/3-configureefs/3213.png?featherlight=false&width=90pc">
+<img alt="VPC" src="/images/3-configureefs/3214.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -934,19 +971,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1711099135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1711099135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1711099135"></script>
-    <script src="/js/jquery.sticky.js?1711099135"></script>
-    <script src="/js/featherlight.min.js?1711099135"></script>
-    <script src="/js/highlight.pack.js?1711099135"></script>
+    <script src="/js/clipboard.min.js?1711121595"></script>
+    <script src="/js/perfect-scrollbar.min.js?1711121595"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1711121595"></script>
+    <script src="/js/jquery.sticky.js?1711121595"></script>
+    <script src="/js/featherlight.min.js?1711121595"></script>
+    <script src="/js/highlight.pack.js?1711121595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1711099135"></script>
-    <script src="/js/learn.js?1711099135"></script>
-    <script src="/js/hugo-learn.js?1711099135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1711121595"></script>
+    <script src="/js/learn.js?1711121595"></script>
+    <script src="/js/hugo-learn.js?1711121595"></script>
 
-    <link href="/mermaid/mermaid.css?1711099135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1711099135"></script>
+    <link href="/mermaid/mermaid.css?1711121595" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1711121595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

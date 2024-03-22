@@ -5,14 +5,24 @@ weight : 1
 chapter : false
 pre : " <b> 3.1 </b> "
 ---
-## Create Security group for EFS
+## Security group settings
 
-1. Access the **AWS Management Console** interface:
-   - Locate and click on **VPC**
-   
-![VPC](/images/3-configureefs/3.1-createsecuritygroupsforefs/1.png?featherlight=false&width=90pc)
+1. Create **Create Security group for EFS** interface:
+   - Name:	**WebServers-EFS-1-SG**
+   - VPC:	**Web_Servers_SG**
+   - Configure Inbound:  Allow **NFS**
 
-2. Within the **VPC** interface:
-   - Select **Your VPC**
+![VPC](/images/3-configureefs/311.png?featherlight=false&width=90pc)
    
-![VPC](/images/3-configureefs/3.1-createsecuritygroupsforefs/2.png?featherlight=false&width=90pc)
+![VPC](/images/3-configureefs/312.png?featherlight=false&width=90pc)
+
+![VPC](/images/3-configureefs/313.png?featherlight=false&width=90pc)
+
+2. Checking **Security Groups** interface:
+   - Select **WebServers-EFS-1-SG**
+
+![VPC](/images/3-configureefs/314.png?featherlight=false&width=90pc)
+
+![VPC](/images/3-configureefs/315.png?featherlight=false&width=90pc)
+   
+

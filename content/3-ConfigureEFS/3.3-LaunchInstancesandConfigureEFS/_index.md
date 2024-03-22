@@ -6,16 +6,27 @@ chapter : false
 pre : " <b> 3.3 </b> "
 ---
 
-## Create an Internet Gateway
+## Configuration
 
-1. In the **VPC** interface:
-   - Select **Internet Gateways**
+**Instances** configure and **Mount EFS** file systems:
 
- ![VPC](/images/3-configureefs/3.3-launchinstancesandconfigureefs/1.png?featherlight=false&width=90pc)
+   - Select **WebServer1**
+   - Connect to Instances
+   - In CMD interface run command:
+     
+     - sudo -i	
+     - sudo yum install -y amazon-efs-utils	
+     - mkdir data	
+     - ls	
+     - **sudo mount -t efs -o tls fs-0469e4e20cb346954:/ data**
+     - cd data	
+     - sudo bash -c "cat >> efs-1-setup.log"	
+	   - efs-1 mounted in site A
+     - cat efs-1-setup.log	
 
-2. Configure the internet gateway:
-   - Enter **```Internet Gateway```** for the **Name tag**
-   - Click on **Create internet gateway**  
-   - 
- ![VPC](/images/3-configureefs/3.3-launchinstancesandconfigureefs/2.png?featherlight=false&width=90pc)
+ ![VPC](/images/3-configureefs/331.png?featherlight=false&width=90pc) 
+ ![VPC](/images/3-configureefs/332.png?featherlight=false&width=90pc) 
+ ![VPC](/images/3-configureefs/333.png?featherlight=false&width=90pc) 
+ ![VPC](/images/3-configureefs/334.png?featherlight=false&width=90pc) 
+
 
