@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.7">
@@ -12,21 +12,21 @@
     <title>Internet gateway :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1711097193" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1711097193" rel="stylesheet">
-    <link href="/css/hybrid.css?1711097193" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1711097193" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1711097193" rel="stylesheet">
-    <link href="/css/auto-complete.css?1711097193" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1711097193" rel="stylesheet">
-    <link href="/css/theme.css?1711097193" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1711097193" rel="stylesheet">
+    <link href="/css/nucleus.css?1711101706" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1711101706" rel="stylesheet">
+    <link href="/css/hybrid.css?1711101706" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1711101706" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1711101706" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711101706" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1711101706" rel="stylesheet">
+    <link href="/css/theme.css?1711101706" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1711101706" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1711097193" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1711101706" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1711097193"></script>
+    <script src="/js/jquery-3.3.1.min.js?1711101706"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1711097193"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1711097193"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1711101706"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1711101706"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1711097193"></script>
+<script type="text/javascript" src="/js/search.js?1711101706"></script>
 
     
   </div>
@@ -493,7 +493,7 @@
                   
                     
                     
-                      <option id="en" value="/2-prepairation/2.2-internetgateway/" selected>English</option>
+                      <option id="en" value="//localhost:1313/2-prepairation/2.2-internetgateway/" selected>English</option>
                     
                   
               
@@ -507,7 +507,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-prepairation/2.2-internetgateway/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-prepairation/2.2-internetgateway/">Tiếng Việt</option>
                     
                   
               
@@ -610,8 +610,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#internet-gateway">Internet Gateway</a></li>
-    <li><a href="#network-acl-rules">Network ACL Rules</a></li>
+    <li><a href="#internet-gateway-configure">Internet gateway configure:</a></li>
   </ul>
 </nav>
     </div>
@@ -637,24 +636,16 @@
 
 
 
-	<h2 id="internet-gateway">Internet Gateway</h2>
+	<h2 id="internet-gateway-configure">Internet gateway configure:</h2>
 <ul>
-<li><strong>Default Network ACL:</strong> After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC.</li>
+<li>
+<p><strong>An AWS Internet Gateway:</strong> is a managed service that allows communication between instances within your Amazon Virtual Private Cloud (VPC) and the internet.</p>
+</li>
+<li>
+<p>We will create a Internet Gateway (name: <strong>Internet Gateway</strong>) and attach to our VPC (<strong>WebServers</strong>)</p>
+</li>
 </ul>
-<p><img alt="VPC" src="/images/2-Prepairation/2.2-internetgateway/igw.png?featherlight=false&width=90pc"></p>
-<h2 id="network-acl-rules">Network ACL Rules</h2>
-<p>You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL&rsquo;s rules automatically apply to its associated subnets.</p>
-<p>Components of a network ACL rule:</p>
-<ul>
-<li><strong>Rule Number:</strong> Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it&rsquo;s immediately applied even if it conflicts with higher-numbered rules.</li>
-<li><strong>Type:</strong> Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges.</li>
-<li><strong>Protocol:</strong> Specify the protocol using standard protocol numbers.</li>
-<li><strong>Port Range:</strong> Define the port or port range for traffic (e.g., HTTP is 80).</li>
-<li><strong>Source:</strong> [Inbound Rule] Defines the traffic origin (CIDR range).</li>
-<li><strong>Destination:</strong> [Outbound Rule] Specifies the traffic destination (CIDR range).</li>
-<li><strong>Allow/Deny:</strong> Choose to Allow or Deny the specified traffic.</li>
-</ul>
-<p><img alt="VPC" src="../images/2-Prepairation/vps.png?featherlight=false&width=60pc"></p>
+<p><img alt="VPC" src="/images/2-Prepairation/221.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -935,19 +926,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1711097193"></script>
-    <script src="/js/perfect-scrollbar.min.js?1711097193"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1711097193"></script>
-    <script src="/js/jquery.sticky.js?1711097193"></script>
-    <script src="/js/featherlight.min.js?1711097193"></script>
-    <script src="/js/highlight.pack.js?1711097193"></script>
+    <script src="/js/clipboard.min.js?1711101706"></script>
+    <script src="/js/perfect-scrollbar.min.js?1711101706"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1711101706"></script>
+    <script src="/js/jquery.sticky.js?1711101706"></script>
+    <script src="/js/featherlight.min.js?1711101706"></script>
+    <script src="/js/highlight.pack.js?1711101706"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1711097193"></script>
-    <script src="/js/learn.js?1711097193"></script>
-    <script src="/js/hugo-learn.js?1711097193"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1711101706"></script>
+    <script src="/js/learn.js?1711101706"></script>
+    <script src="/js/hugo-learn.js?1711101706"></script>
 
-    <link href="/mermaid/mermaid.css?1711097193" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1711097193"></script>
+    <link href="/mermaid/mermaid.css?1711101706" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1711101706"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

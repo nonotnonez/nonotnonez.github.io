@@ -6,11 +6,14 @@ chapter : false
 pre : " <b> 2.3 </b> "
 ---
 
-## Route table
+## Route table configure
 
-To begin, follow these steps to access the VPC Resource Map in the VPC console:
+- **An AWS Route Table** is a set of rules, also known as routes, that determine where network traffic is directed within a Virtual Private Cloud (VPC).
+- We will create a route table (name: **Route Table-Public**) connect to **Internet gateway** and allow two subnets (**WebServers-Subnet1** and **WebServers-Subnet2**)
 
-![VPC](/images/2-Prepairation/2.3-routetable/rtb1.png?featherlight=false&width=90pc)
 
-![VPC](/images/2-Prepairation/2.3-routetable/rtb2.png?featherlight=false&width=90pc)
+![VPC](/images/2-Prepairation/231.png?featherlight=false&width=90pc)
+
+![VPC](/images/2-Prepairation/232.png?featherlight=false&width=90pc)
+
 

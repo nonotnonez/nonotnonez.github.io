@@ -2,196 +2,196 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>//localhost:1313/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="//localhost:1313/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="//localhost:1313/"
                 />
   </url><url>
-    <loc>/3-configureefs/3.1-createsecuritygroupsforefs/</loc>
+    <loc>//localhost:1313/3-configureefs/3.1-createsecuritygroupsforefs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-configureefs/3.1-createsecuritygroupsforefs/"
+                href="//localhost:1313/vi/3-configureefs/3.1-createsecuritygroupsforefs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-configureefs/3.1-createsecuritygroupsforefs/"
+                href="//localhost:1313/3-configureefs/3.1-createsecuritygroupsforefs/"
                 />
   </url><url>
-    <loc>/1-introduce/</loc>
+    <loc>//localhost:1313/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-introduce/"
+                href="//localhost:1313/vi/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-introduce/"
+                href="//localhost:1313/1-introduce/"
                 />
   </url><url>
-    <loc>/2-prepairation/2.1-vpcsubnets/</loc>
+    <loc>//localhost:1313/2-prepairation/2.1-vpcsubnets/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prepairation/2.1-vpcsubnets/"
+                href="//localhost:1313/vi/2-prepairation/2.1-vpcsubnets/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prepairation/2.1-vpcsubnets/"
+                href="//localhost:1313/2-prepairation/2.1-vpcsubnets/"
                 />
   </url><url>
-    <loc>/3-configureefs/3.2-createefsforfilesystems/</loc>
+    <loc>//localhost:1313/3-configureefs/3.2-createefsforfilesystems/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-configureefs/3.2-createefsforfilesystems/"
+                href="//localhost:1313/vi/3-configureefs/3.2-createefsforfilesystems/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-configureefs/3.2-createefsforfilesystems/"
+                href="//localhost:1313/3-configureefs/3.2-createefsforfilesystems/"
                 />
   </url><url>
-    <loc>/2-prepairation/2.2-internetgateway/</loc>
+    <loc>//localhost:1313/2-prepairation/2.2-internetgateway/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prepairation/2.2-internetgateway/"
+                href="//localhost:1313/vi/2-prepairation/2.2-internetgateway/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prepairation/2.2-internetgateway/"
+                href="//localhost:1313/2-prepairation/2.2-internetgateway/"
                 />
   </url><url>
-    <loc>/2-prepairation/</loc>
+    <loc>//localhost:1313/2-prepairation/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prepairation/"
+                href="//localhost:1313/vi/2-prepairation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prepairation/"
+                href="//localhost:1313/2-prepairation/"
                 />
   </url><url>
-    <loc>/3-configureefs/</loc>
+    <loc>//localhost:1313/3-configureefs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-configureefs/"
+                href="//localhost:1313/vi/3-configureefs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-configureefs/"
+                href="//localhost:1313/3-configureefs/"
                 />
   </url><url>
-    <loc>/3-configureefs/3.3-launchinstancesandconfigureefs/</loc>
+    <loc>//localhost:1313/3-configureefs/3.3-launchinstancesandconfigureefs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-configureefs/3.3-launchinstancesandconfigureefs/"
+                href="//localhost:1313/vi/3-configureefs/3.3-launchinstancesandconfigureefs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-configureefs/3.3-launchinstancesandconfigureefs/"
+                href="//localhost:1313/3-configureefs/3.3-launchinstancesandconfigureefs/"
                 />
   </url><url>
-    <loc>/2-prepairation/2.3-routetable/</loc>
+    <loc>//localhost:1313/2-prepairation/2.3-routetable/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prepairation/2.3-routetable/"
+                href="//localhost:1313/vi/2-prepairation/2.3-routetable/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prepairation/2.3-routetable/"
+                href="//localhost:1313/2-prepairation/2.3-routetable/"
                 />
   </url><url>
-    <loc>/4-resourcecleanup/</loc>
+    <loc>//localhost:1313/4-resourcecleanup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-resourcecleanup/"
+                href="//localhost:1313/vi/4-resourcecleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-resourcecleanup/"
+                href="//localhost:1313/4-resourcecleanup/"
                 />
   </url><url>
-    <loc>/2-prepairation/2.4-securitygroups/</loc>
+    <loc>//localhost:1313/2-prepairation/2.4-securitygroups/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prepairation/2.4-securitygroups/"
+                href="//localhost:1313/vi/2-prepairation/2.4-securitygroups/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prepairation/2.4-securitygroups/"
+                href="//localhost:1313/2-prepairation/2.4-securitygroups/"
                 />
   </url><url>
-    <loc>/3-configureefs/3.4-sharefilesbetweentwoec2instances/</loc>
+    <loc>//localhost:1313/3-configureefs/3.4-sharefilesbetweentwoec2instances/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-configureefs/3.4-sharefilesbetweentwoec2instances/"
+                href="//localhost:1313/vi/3-configureefs/3.4-sharefilesbetweentwoec2instances/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-configureefs/3.4-sharefilesbetweentwoec2instances/"
+                href="//localhost:1313/3-configureefs/3.4-sharefilesbetweentwoec2instances/"
                 />
   </url><url>
-    <loc>/2-prepairation/2.5-instances/</loc>
+    <loc>//localhost:1313/2-prepairation/2.5-instances/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prepairation/2.5-instances/"
+                href="//localhost:1313/vi/2-prepairation/2.5-instances/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prepairation/2.5-instances/"
+                href="//localhost:1313/2-prepairation/2.5-instances/"
                 />
   </url><url>
-    <loc>/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/categories/"
+                href="//localhost:1313/vi/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="//localhost:1313/categories/"
                 />
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/tags/"
+                href="//localhost:1313/vi/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="//localhost:1313/tags/"
                 />
   </url>
 </urlset>

@@ -6,8 +6,20 @@ chapter : false
 pre : " <b> 2.5 </b> "
 ---
 
-## Instances
+## Instances configure
 
-To begin, follow these steps to access the VPC Resource Map in the VPC console:
+- **AWS instances** refer to virtual servers that you can deploy and run within the Amazon Elastic Compute Cloud (**EC2**) service.
+- You can choose from a wide range of instance types with different CPU, memory, storage, and networking capabilities to suit your specific workload needs.
+- In free-tiers account we will create to Instances in different Available Zone:
 
-![VPC](/images/2-Prepairation/2.5-instances/ec21.png?featherlight=false&width=90pc)
+    -   Instances 1:
+        - Name: **WebServer1**
+        - Instance type: t2.micro
+        - Availability zone: **ap-southeast-1a**    
+        
+    -   Instances 2:
+        - Name: **WebServer2**
+        - Instance type: t2.micro
+        - Availability zone: **ap-southeast-1b** 
+
+![VPC](/images/2-Prepairation/251.png?featherlight=false&width=90pc)

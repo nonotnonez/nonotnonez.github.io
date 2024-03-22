@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.7">
@@ -12,21 +12,21 @@
     <title>VPC &amp; Subnets :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1711097193" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1711097193" rel="stylesheet">
-    <link href="/css/hybrid.css?1711097193" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1711097193" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1711097193" rel="stylesheet">
-    <link href="/css/auto-complete.css?1711097193" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1711097193" rel="stylesheet">
-    <link href="/css/theme.css?1711097193" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1711097193" rel="stylesheet">
+    <link href="/css/nucleus.css?1711101706" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1711101706" rel="stylesheet">
+    <link href="/css/hybrid.css?1711101706" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1711101706" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1711101706" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711101706" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1711101706" rel="stylesheet">
+    <link href="/css/theme.css?1711101706" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1711101706" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1711097193" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1711101706" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1711097193"></script>
+    <script src="/js/jquery-3.3.1.min.js?1711101706"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1711097193"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1711097193"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1711101706"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1711101706"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1711097193"></script>
+<script type="text/javascript" src="/js/search.js?1711101706"></script>
 
     
   </div>
@@ -493,7 +493,7 @@
                   
                     
                     
-                      <option id="en" value="/2-prepairation/2.1-vpcsubnets/" selected>English</option>
+                      <option id="en" value="//localhost:1313/2-prepairation/2.1-vpcsubnets/" selected>English</option>
                     
                   
               
@@ -507,7 +507,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-prepairation/2.1-vpcsubnets/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-prepairation/2.1-vpcsubnets/">Tiếng Việt</option>
                     
                   
               
@@ -610,14 +610,10 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#vpc">VPC</a>
+    <li>
       <ul>
-        <li><a href="#basic-features-of-security-group">Basic Features of Security Group</a></li>
-      </ul>
-    </li>
-    <li><a href="#subnets">Subnets</a>
-      <ul>
-        <li><a href="#components-of-security-group-rule">Components of Security Group Rule</a></li>
+        <li><a href="#vpc-configure">VPC configure</a></li>
+        <li><a href="#subnets-configure">Subnets configure</a></li>
       </ul>
     </li>
   </ul>
@@ -645,17 +641,47 @@
 
 
 
-	<h2 id="vpc">VPC</h2>
-<h3 id="basic-features-of-security-group">Basic Features of Security Group</h3>
+	<h3 id="vpc-configure">VPC configure</h3>
 <ul>
-<li><strong>Allow Rules Only:</strong> Only Allow rules can be added; Deny rules cannot be added.</li>
+<li>
+<p><strong>An AWS Virtual Private Cloud (VPC)</strong> is a virtual network environment within the Amazon Web Services (AWS) cloud platform. It allows you to create a logically isolated section of the AWS cloud where you can launch AWS resources like EC2 instances, RDS databases, and more.</p>
+</li>
+<li>
+<p>We will create a manual VPC with config.</p>
+<ul>
+<li>VPC Name:    <strong>WebServers</strong></li>
+<li>IPv4 CIDR:   <strong>10.10.0.0/16</strong></li>
+</ul>
+</li>
 </ul>
 <p><img alt="VPC" src="/images/2-Prepairation/211.png?featherlight=false&width=90pc"></p>
-<h2 id="subnets">Subnets</h2>
-<p>A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.</p>
-<h3 id="components-of-security-group-rule">Components of Security Group Rule</h3>
+<h3 id="subnets-configure">Subnets configure</h3>
 <ul>
-<li><strong>Inbound Rules:</strong> These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address.</li>
+<li>
+<p><strong>AWS Subnets</strong> are segmented portions of an Amazon Virtual Private Cloud (VPC) network.</p>
+</li>
+<li>
+<p>They allow you to divide the IP address range of your VPC and organize resources into smaller, manageable groups.</p>
+</li>
+<li>
+<p>We will create two subnets with two different Availability Zone.</p>
+</li>
+<li>
+<p>Subnet 1:</p>
+<ul>
+<li>Subnet Name:        <strong>WebServers-Subnet1</strong></li>
+<li>IPv4 CIDR:          <strong>10.10.1.0/24</strong></li>
+<li>Availability Zone:  <strong>ap-southeast-1a</strong></li>
+</ul>
+</li>
+<li>
+<p>Subnet 2:</p>
+<ul>
+<li>Subnet Name:        <strong>WebServers-Subnet2</strong></li>
+<li>IPv4 CIDR:          <strong>10.10.2.0/24</strong></li>
+<li>Availability Zone:  <strong>ap-southeast-1b</strong></li>
+</ul>
+</li>
 </ul>
 <p><img alt="VPC" src="/images/2-Prepairation/212.png?featherlight=false&width=90pc"></p>
 
@@ -935,19 +961,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1711097193"></script>
-    <script src="/js/perfect-scrollbar.min.js?1711097193"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1711097193"></script>
-    <script src="/js/jquery.sticky.js?1711097193"></script>
-    <script src="/js/featherlight.min.js?1711097193"></script>
-    <script src="/js/highlight.pack.js?1711097193"></script>
+    <script src="/js/clipboard.min.js?1711101706"></script>
+    <script src="/js/perfect-scrollbar.min.js?1711101706"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1711101706"></script>
+    <script src="/js/jquery.sticky.js?1711101706"></script>
+    <script src="/js/featherlight.min.js?1711101706"></script>
+    <script src="/js/highlight.pack.js?1711101706"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1711097193"></script>
-    <script src="/js/learn.js?1711097193"></script>
-    <script src="/js/hugo-learn.js?1711097193"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1711101706"></script>
+    <script src="/js/learn.js?1711101706"></script>
+    <script src="/js/hugo-learn.js?1711101706"></script>
 
-    <link href="/mermaid/mermaid.css?1711097193" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1711097193"></script>
+    <link href="/mermaid/mermaid.css?1711101706" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1711101706"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
