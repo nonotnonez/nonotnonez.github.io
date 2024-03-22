@@ -10,7 +10,7 @@ pre : " <b> 2.5 </b> "
 
 - **AWS instances** refer to virtual servers that you can deploy and run within the Amazon Elastic Compute Cloud (**EC2**) service.
 - You can choose from a wide range of instance types with different CPU, memory, storage, and networking capabilities to suit your specific workload needs.
-- In free-tiers account we will create to Instances in different Available Zone:
+- In free-tiers account we will create two Instances in different Available Zone:
 
     -   Instances 1:
         - Name: **WebServer1**

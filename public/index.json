@@ -95,7 +95,7 @@
 	"title": "Instances",
 	"tags": [],
 	"description": "",
-	"content": "Instances configure AWS instances refer to virtual servers that you can deploy and run within the Amazon Elastic Compute Cloud (EC2) service.\nYou can choose from a wide range of instance types with different CPU, memory, storage, and networking capabilities to suit your specific workload needs.\nIn free-tiers account we will create to Instances in different Available Zone:\nInstances 1:\nName: WebServer1 Instance type: t2.micro Availability zone: ap-southeast-1a Instances 2:\nName: WebServer2 Instance type: t2.micro Availability zone: ap-southeast-1b "
+	"content": "Instances configure AWS instances refer to virtual servers that you can deploy and run within the Amazon Elastic Compute Cloud (EC2) service.\nYou can choose from a wide range of instance types with different CPU, memory, storage, and networking capabilities to suit your specific workload needs.\nIn free-tiers account we will create two Instances in different Available Zone:\nInstances 1:\nName: WebServer1 Instance type: t2.micro Availability zone: ap-southeast-1a Instances 2:\nName: WebServer2 Instance type: t2.micro Availability zone: ap-southeast-1b "
 },
 {
 	"uri": "//localhost:1313/categories/",
