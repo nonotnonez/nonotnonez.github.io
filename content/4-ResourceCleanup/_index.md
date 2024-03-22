@@ -14,8 +14,8 @@ We will proceed to delete the resources in the following order:
     - Select **WebServers1** and **WebServers2**
     - Select **Terminate**
       
-![Terminate EC2](/images/4/ec21.png?featherlight=false&width=90pc)
-![Terminate EC2](/images/4/ec22.png?featherlight=false&width=90pc)
+![Terminate EC2](../images/4/ec21.png?featherlight=false&width=90pc)
+![Terminate EC2](../images/4/ec22.png?featherlight=false&width=90pc)
 
 2. Delete Security Groups
     - Access to Security Groups
@@ -28,7 +28,7 @@ We will proceed to delete the resources in the following order:
 3. Delete file system
     - Access the Amazon EFS
     - Select **WebServers-EFS-1-SG**.
-    - Select **Delete**
+    - Select **delete**
     - Confirm.
    
 ![Terminate EC2](/images/4/efs.png?featherlight=false&width=90pc)
