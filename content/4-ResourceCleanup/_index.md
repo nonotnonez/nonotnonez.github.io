@@ -15,7 +15,7 @@ We will proceed to delete the resources in the following order:
     - Select **Terminate**
       
 ![Terminate EC2](../images/4/ec21.png?featherlight=false&width=90pc)
-![Terminate EC2](../images/4/ec22.png?featherlight=false&width=90pc)
+![Terminate EC2](/images/4/ec22.png?featherlight=false&width=90pc)
 
 2. Delete Security Groups
     - Access to Security Groups
