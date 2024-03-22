@@ -1,111 +1,111 @@
 [
 {
-	"uri": "//localhost:1313/",
+	"uri": "/",
 	"title": " Amazon EFS file system ",
 	"tags": [],
 	"description": "",
 	"content": "File Systems in the Cloud Overview Amazone Elastic File System (Amazon EFS) provides a serverless, set-and-forget-elastic file system that you can use to share file data without provisioning or managing storage.\nIn this workshop , we will deploy and maintain a file systems infrastructure that is asscessible from two different server\nContent Introduction Prepairation Configure EFS Resource Cleanup "
 },
 {
-	"uri": "//localhost:1313/3-configureefs/3.1-createsecuritygroupsforefs/",
+	"uri": "/3-configureefs/3.1-createsecuritygroupsforefs/",
 	"title": "Create Security groups",
 	"tags": [],
 	"description": "",
 	"content": "Create Security group for EFS Access the AWS Management Console interface: Locate and click on VPC Within the VPC interface: Select Your VPC "
 },
 {
-	"uri": "//localhost:1313/1-introduce/",
+	"uri": "/1-introduce/",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Introduction to Amazon EFS Amazon EFS create a shared storage file system that is available concurrently to multiple instances in Amazon Elastic Compute Cloud (Amazon EC2).\nAmazon EFS can be used to share file data without provisioning or managing servers. Amazone EFS automatically grows and shinks as files are added and removed , so capacity doesn\u0026rsquo;t need to me managed. Servers access shared data in Amazon EFS by using mount targets in each Availability Zone.\nApplications on each server view each mounted file systems as a local path, similar to \u0026ldquo;/mnt/efs\u0026rdquo;.\nIn the following sections, we will:\nLaunch and configure Amazon EFS file system. Mount the file system to an Amazon EC2 instance. Connect a second EC2 instance to the same file system. Share files between the two EC2 instances. Contents 2. Prepairation\nConfigure EFS Resource Cleanup "
+	"content": "Introduction to Amazon EFS Amazon EFS create a shared storage file system that is available concurrently to multiple instances in Amazon Elastic Compute Cloud (Amazon EC2).\nAmazon EFS can be used to share file data without provisioning or managing servers. Amazone EFS automatically grows and shinks as files are added and removed , so capacity doesn\u0026rsquo;t need to me managed. Servers access shared data in Amazon EFS by using mount targets in each Availability Zone.\nApplications on each server view each mounted file systems as a local path, similar to \u0026ldquo;/mnt/efs\u0026rdquo;.\nIn the following sections, we will:\nLaunch and configure Amazon EFS file system. Mount the file system to an Amazon EC2 instance. Connect a second EC2 instance to the same file system. Share files between the two EC2 instances. Contents Prepairation Configure EFS Resource Cleanup "
 },
 {
-	"uri": "//localhost:1313/2-prepairation/2.1-vpcsubnets/",
+	"uri": "/2-prepairation/2.1-vpcsubnets/",
 	"title": "VPC &amp; Subnets",
 	"tags": [],
 	"description": "",
 	"content": "VPC Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Subnets A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. "
 },
 {
-	"uri": "//localhost:1313/3-configureefs/3.2-createefsforfilesystems/",
+	"uri": "/3-configureefs/3.2-createefsforfilesystems/",
 	"title": "Create EFS for file systems",
 	"tags": [],
 	"description": "",
 	"content": "Create Subnet In the VPC Interface: Select Subnets Select Create subnet In the Create subnet Interface: Select ASG VPC "
 },
 {
-	"uri": "//localhost:1313/2-prepairation/2.2-internetgateway/",
+	"uri": "/2-prepairation/2.2-internetgateway/",
 	"title": "Internet gateway",
 	"tags": [],
 	"description": "",
 	"content": "Internet Gateway Default Network ACL: After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC. Network ACL Rules You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL\u0026rsquo;s rules automatically apply to its associated subnets.\nComponents of a network ACL rule:\nRule Number: Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it\u0026rsquo;s immediately applied even if it conflicts with higher-numbered rules. Type: Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges. Protocol: Specify the protocol using standard protocol numbers. Port Range: Define the port or port range for traffic (e.g., HTTP is 80). Source: [Inbound Rule] Defines the traffic origin (CIDR range). Destination: [Outbound Rule] Specifies the traffic destination (CIDR range). Allow/Deny: Choose to Allow or Deny the specified traffic. "
 },
 {
-	"uri": "//localhost:1313/2-prepairation/",
+	"uri": "/2-prepairation/",
 	"title": "Prepairation",
 	"tags": [],
 	"description": "",
 	"content": "Firewall in VPC In this lab, we will be constructing a model based on the following diagram:\nContents VPC \u0026amp; Subnets Internet gateway Route table Security groups Instances "
 },
 {
-	"uri": "//localhost:1313/3-configureefs/",
+	"uri": "/3-configureefs/",
 	"title": "Configure EFS",
 	"tags": [],
 	"description": "",
 	"content": "Amazone Elastic File System (Amazon EFS) Using Amazon EFS, you can grow and shink your file systems automatically as you add and remove files, removing the need to provision and manage capacity to accommodate growth.\nContent Create Security groups Create EFS for file systems Launch Instances and Configure EFS Share files between two EC2 Instance "
 },
 {
-	"uri": "//localhost:1313/3-configureefs/3.3-launchinstancesandconfigureefs/",
+	"uri": "/3-configureefs/3.3-launchinstancesandconfigureefs/",
 	"title": "Launch Instances and Configure EFS",
 	"tags": [],
 	"description": "",
 	"content": "Create an Internet Gateway In the VPC interface: Select Internet Gateways Configure the internet gateway: Enter Internet Gateway for the Name tag Click on Create internet gateway "
 },
 {
-	"uri": "//localhost:1313/2-prepairation/2.3-routetable/",
+	"uri": "/2-prepairation/2.3-routetable/",
 	"title": "Route table",
 	"tags": [],
 	"description": "",
 	"content": "Route table To begin, follow these steps to access the VPC Resource Map in the VPC console:\n"
 },
 {
-	"uri": "//localhost:1313/4-resourcecleanup/",
+	"uri": "/4-resourcecleanup/",
 	"title": "Resource Cleanup",
 	"tags": [],
 	"description": "",
 	"content": "Clean up resources We will proceed to delete the resources in the following order:\nTerminate EC2 Instances Terminate EC2 instance: Access the Amazon EC2 console at EC2. On the left navigation bar, select \u0026ldquo;Instances.\u0026rdquo; Select all EC2 instances related to the lab. Select Instance state. Select Terminate instance. TESTING\nAdd ..\rAdd 0003\rConfirm termination.\nRemove NAT Gateway and Elastic IP Address Remove NAT Gateway and Elastic IP Address. AWS charges for wasted EIPs, so you need to double-check to avoid unintended charges.\nVisit the Amazon VPC console page at VPC.\nOn the left navigation bar, click \u0026ldquo;NAT Gateway.\u0026rdquo;\nSelect NAT Gateway.\nClick Action.\nClick Delete NAT Gateway.\nType \u0026ldquo;delete.\u0026rdquo;\nClick Delete to confirm the deletion of NAT Gateway.\nDelete Elastic IP Address Continue to delete Elastic IP Address.\nVisit the Amazon VPC console page at VPC.\nOn the left navigation bar, click \u0026ldquo;Elastic IP.\u0026rdquo;\nSelect the Elastic IP Address we created.\nClick Action.\nClick Release Elastic IP Address.\nClick Release.\nDelete the EC2 Instance connection endpoint Access to Endpoint transactions Select Action, select Delete VPC endpoints Enter delete Delete in the following order: VPN Site to Site connection.\nVirtual Private Gateway.\nCustomer Gateway.\nVPC ASG VPN.\nVPC ASG.\n"
 },
 {
-	"uri": "//localhost:1313/2-prepairation/2.4-securitygroups/",
+	"uri": "/2-prepairation/2.4-securitygroups/",
 	"title": "Security groups",
 	"tags": [],
 	"description": "",
 	"content": "Security Groups To begin, follow these steps to access the VPC Resource Map in the VPC console:\n"
 },
 {
-	"uri": "//localhost:1313/3-configureefs/3.4-sharefilesbetweentwoec2instances/",
+	"uri": "/3-configureefs/3.4-sharefilesbetweentwoec2instances/",
 	"title": "Share files between two EC2 Instance",
 	"tags": [],
 	"description": "",
 	"content": "Create Route Table for Outbound Internet Routing via Internet Gateway In the VPC interface:\nSelect Route Tables. Click on Create route table. Configure the Route table:\nEnter a Name: Route table-Public Complete creating the Route table.\nTo make route edits:\nSelect Actions. Choose Edit routes. In the Edit routes interface:\nClick on Add route. Fill in the Destination CIDR: 0.0.0.0/0 representing the Internet. In the Target section, select Internet Gateway, then choose the created Internet Gateway (Gateway ID auto-fills). Click Save changes. Review and confirm the updated Routes.\nEnsure that Route table - Public is selected.\nSelect Subnet Associations. Click on Edit subnet associations. In the Edit subnet associations step:\nAdjust the width of the Subnet ID column by dragging the pane to the right. Select the appropriate 2 public subnets that were created. Click on Save associations.\nReview and confirm the updated Subnet associations.\n"
 },
 {
-	"uri": "//localhost:1313/2-prepairation/2.5-instances/",
+	"uri": "/2-prepairation/2.5-instances/",
 	"title": "Instances",
 	"tags": [],
 	"description": "",
 	"content": "Instances To begin, follow these steps to access the VPC Resource Map in the VPC console:\n"
 },
 {
-	"uri": "//localhost:1313/categories/",
+	"uri": "/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/tags/",
+	"uri": "/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
