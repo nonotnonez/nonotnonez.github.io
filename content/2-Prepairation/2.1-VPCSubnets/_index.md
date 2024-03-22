@@ -6,21 +6,31 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-## VPC
+### VPC
 
-### Basic Features of Security Group
+- **Setings:** We will create a manual VPC with config
 
-- **Allow Rules Only:** Only Allow rules can be added; Deny rules cannot be added.
+    VPC Name:    WebServers
+    IPxv CIDR:   10.10.0.0/16
 
 ![VPC](/images/2-Prepairation/211.png?featherlight=false&width=90pc)
 
 
-## Subnets
+### Subnets
 
-A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.
+- **Settings:** We will create two subnets with two different Availability Zone
 
-### Components of Security Group Rule
+- Subnet 1:
+    Subnet Name:        WebServers-Subnet1
+    IPv4 CIDR:          10.10.1.0/24
+    Availability Zone:  ap-southeast-1a
 
-- **Inbound Rules:** These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address.
+- Subnet 2:
+- 
+    Subnet Name:        WebServers-Subnet2
+    IPv4 CIDR:          10.10.2.0/24
+    Availability Zone:  ap-southeast-1b
+
+
 
 ![VPC](/images/2-Prepairation/212.png?featherlight=false&width=90pc)
