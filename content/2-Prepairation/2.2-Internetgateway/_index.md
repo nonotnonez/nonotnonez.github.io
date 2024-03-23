@@ -12,4 +12,4 @@ pre : " <b> 2.2 </b> "
 
 - We will create a Internet Gateway (name: **Internet Gateway**) and attach to our VPC (**WebServers**)
 
-![VPC](/images/2-Prepairation/221.png?featherlight=false&width=90pc)
+![VPC](/images/2-prepairation/221.png?featherlight=false&width=90pc)

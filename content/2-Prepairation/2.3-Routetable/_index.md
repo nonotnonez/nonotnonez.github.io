@@ -12,8 +12,8 @@ pre : " <b> 2.3 </b> "
 - We will create a route table (name: **Route Table-Public**) connect to **Internet gateway** and allow two subnets (**WebServers-Subnet1** and **WebServers-Subnet2**)
 
 
-![VPC](/images/2-Prepairation/231.png?featherlight=false&width=90pc)
+![VPC](/images/2-prepairation/231.png?featherlight=false&width=90pc)
 
-![VPC](/images/2-Prepairation/232.png?featherlight=false&width=90pc)
+![VPC](/images/2-prepairation/232.png?featherlight=false&width=90pc)
 
 

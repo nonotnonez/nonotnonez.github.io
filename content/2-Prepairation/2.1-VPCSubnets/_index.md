@@ -14,7 +14,7 @@ pre : " <b> 2.1 </b> "
     -   VPC Name:    **WebServers**
     -   IPv4 CIDR:   **10.10.0.0/16**
 
-![VPC](/images/2-Prepairation/211.png?featherlight=false&width=90pc)
+![VPC](/images/2-prepairation/211.png?featherlight=false&width=90pc)
 
 
 ### Subnets configure
@@ -35,4 +35,4 @@ pre : " <b> 2.1 </b> "
 
 
 
-![VPC](/images/2-Prepairation/212.png?featherlight=false&width=90pc)
+![VPC](/images/2-prepairation/212.png?featherlight=false&width=90pc)

@@ -22,4 +22,4 @@ pre : " <b> 2.5 </b> "
         - Instance type: t2.micro
         - Availability zone: **ap-southeast-1b** 
 
-![VPC](/images/2-Prepairation/251.png?featherlight=false&width=90pc)
+![VPC](/images/2-prepairation/251.png?featherlight=false&width=90pc)
