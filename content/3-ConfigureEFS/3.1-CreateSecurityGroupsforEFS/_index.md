@@ -12,9 +12,9 @@ pre : " <b> 3.1 </b> "
    - VPC:	**Web_Servers_SG**
    - Configure Inbound:  Allow **NFS**
 
-![VPC](../images/3-configureefs/311.png?featherlight=false&width=90pc)
+![VPC](/images/3-configureefs/311.png?featherlight=false&width=90pc)
    
-![VPC](../images/3-configureefs/312.png?featherlight=false&width=90pc)
+![VPC](/images/3-configureefs/312.png?featherlight=false&width=90pc)
 
 ![VPC](/images/3-configureefs/313.png?featherlight=false&width=90pc)
 
