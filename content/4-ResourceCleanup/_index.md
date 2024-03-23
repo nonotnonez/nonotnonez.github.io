@@ -16,7 +16,7 @@ We will proceed to delete the resources in the following order:
       
 ![VPC](/images/2/efs-diagram.png?featherlight=false&width=90pc)
 
-![Terminate EC2](../images/4/ec21.png?featherlight=false&width=90pc)
+![Terminate EC2](/images/4/resourcecleanup/sg1.png?featherlight=false&width=90pc)
 
 ![Terminate EC2](/images/4/ec22.png?featherlight=false&width=90pc)
 
